@@ -1,0 +1,9 @@
+/node_modules
+/allure-report
+/allure-results
+*.log
+.DS_Store
+src/.DS_Store
+src/core/.DS_Store
+src/specs/.DS_Store
+src/testData/.DS_Store
