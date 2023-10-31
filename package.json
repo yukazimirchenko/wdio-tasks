@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "allure": "allure generate allure-results/ --clean && allure open",
-    "clean": "rimraf /.allure-report", 
+    "clean": "rimraf /.allure-report",
+    "allure": "allure generate ./allure-results/ --clean && allure open",
     "wdio": "wdio run ./wdio.conf.ts",
-    "api": "wdio ./wdio.conf.ts --suite api"
+    "api": "wdio ./wdio.conf.ts --suite api",
+    "git_test": "wdio ./wdio.conf.ts --suite git_test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^8.7.0",
+    "dotenv": "^16.3.1",
     "unirest": "^0.6.0"
   },
   "devDependencies": {
@@ -22,7 +24,7 @@
     "@wdio/mocha-framework": "^8.7.0",
     "@wdio/spec-reporter": "^8.7.0",
     "allure-commandline": "^2.21.0",
-    "chromedriver": "^112.0.0",
+    "chromedriver": "^117.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "wdio-chromedriver-service": "^8.1.1",

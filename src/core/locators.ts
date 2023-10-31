@@ -20,4 +20,6 @@ export const gitElements = {
     repoTitle(repoName: string) { return $(`//*[@itemprop='name']/a[.='${repoName}']`) },
     getButtons(buttonTitle: string) { return $(`//*[contains(text(),"${buttonTitle}")]`) },
 
+    get fileName() { return $$(`[role="rowheader"]`)}
+
 }

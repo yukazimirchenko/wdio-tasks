@@ -1,4 +1,6 @@
-import type { Options } from '@wdio/types'
+import type { Options } from '@wdio/types'; 
+
+require('dotenv').config(); 
 
 export const config: Options.Testrunner = {
     runner: 'local',
@@ -16,6 +18,9 @@ export const config: Options.Testrunner = {
     suites: {
         api: [
             './src/specs/api.specs.ts',
+        ], 
+        git_test: [
+            './src/specs/git_test.spec.ts',
         ]
     },
 

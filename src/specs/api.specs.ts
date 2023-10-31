@@ -1,7 +1,7 @@
 import AllureReporter from "@wdio/allure-reporter";
 import { gorestHeaders, restHost, restUrl } from "../testData/gorestData";
 import { randoms } from "../utils/randomGenerator";
-import { HttpMethods } from "../utils/rest";
+import { HttpMethods } from "../core/rest";
 
 describe(`Go Rest API `, () => {
 
@@ -23,7 +23,6 @@ describe(`Go Rest API `, () => {
         AllureReporter.addStep(`Actual status is ${getResponse.status}`);
         expect(getResponse.body.length).toBeGreaterThan(1);
         AllureReporter.addStep(`Actual number of users is ${getResponse.body.length}`);
-        AllureReporter.addS
     });
 
     it(`should create new user`, async () => {

@@ -1,9 +1,9 @@
-import { deelElements } from "../utils/locators";
-import { HttpMethods } from "../utils/rest";
+import { deelElements } from "../core/locators";
+import { HttpMethods } from "../core/rest";
 
 describe(`Deel test`, async () => {
 
-    const deelURL = 'https://growth.deel.training/dev/salary-insights';
+    const deelURL = process.env.TEST_URL;
     const role = 'QA Engineer'; 
     const country = 'Canada';
     const array12 = []
